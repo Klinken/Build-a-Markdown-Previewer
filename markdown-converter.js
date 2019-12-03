@@ -1,6 +1,7 @@
 "use strict";
 
+let markdown = <textarea/>;
 
 
-
-ReactDOM.render(element, document.getElementById("markdown-previewer"));
+ReactDOM.render(markdown, document.getElementById("markdown-converter"));
+ReactDOM.render(previewer, document.getElementById("markdown-previewer"));
