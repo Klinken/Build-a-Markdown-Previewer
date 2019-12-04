@@ -6,7 +6,7 @@ class MarkdownConverter extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-          text: '<p>Hello</p>'
+          text: '**Hello**'
         };
   
       this.handleChange = this.handleChange.bind(this);
@@ -22,7 +22,7 @@ class MarkdownConverter extends React.Component {
       return (
           <div>
           <textarea id="editor" value={this.state.text} onChange={this.handleChange.bind(this)} />
-          <div dangerouslySetInnerHTML={{__html: this.state.text}}></div>
+          <div dangerouslySetInnerHTML={{__html: marked(this.state.text)}}></div>
           </div>
       );
     }
