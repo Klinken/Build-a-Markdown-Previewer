@@ -6,7 +6,7 @@ class MarkdownConverter extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-          text: "# Markdown \nUndertitle \n## Hello \n`<addr>` \n\n ```if (isAwesome){return true}``` \n\n - This to code  \n- Well \n\n\n **As Kanye West said:** \n >We're living the future so \n\n ![Alt Text](/files/maybe.jpg)"
+          text: "# Markdown \nUndertitle \n## Hello \n`<addr>` \n\n ```if (isAwesome){return true}``` \n\n- This to code  \n - Well \n\n\n **As Kanye West said:** \n >We're living the future so \n\n ![Alt Text](/files/maybe.jpg)"
 
         };
   
@@ -26,7 +26,7 @@ class MarkdownConverter extends React.Component {
 
           <textarea id="editor" value={this.state.text} onChange={this.handleChange.bind(this)} />
           
-          <div dangerouslySetInnerHTML={{__html: marked(this.state.text)}}></div>
+          <div id="preview" dangerouslySetInnerHTML={{__html: marked(this.state.text)}}></div>
           
           </div>
       );

@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+  font-family: "Odibee Sans", cursive;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#editor-name {
+  flex-basis: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #8bc8cc;
+}
+#editor-name p {
+  font-size: 250%;
+  line-height: 0;
+  color: #FFF;
+}
+
+#markdown-converter {
+  padding: 0px 10px;
+  flex-basis: 90%;
+}
+#markdown-converter #editor {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+}
+
+/*# sourceMappingURL=style.css.map */
