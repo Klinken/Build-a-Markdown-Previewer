@@ -12,13 +12,18 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <!-- My React -->
     <script src="markdown-converter.js" type="text/babel"></script>
+    <!-- Marked Converter - CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.min.js" integrity="sha256-0Ed5s/n37LIeAWApZmZUhY9icm932KvYkTVdJzUBiI4=" crossorigin="anonymous"></script>
 </head>
 <body>
     
-  
     <!-- React Component-->
-    <div id="markdown-converter"></div>
-    
+    <div id="markdown-converter">
 
+    </div>
+    <script>
+        document.getElementById('theMarkDown').innerHTML =
+          marked(this);
+      </script>
 </body>
 </html>

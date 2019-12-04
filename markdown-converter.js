@@ -1,33 +1,32 @@
 "use strict";
 
 
+
 class MarkdownConverter extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-          text: ""
+          text: '<p>Hello</p>'
         };
   
-      // This binding is necessary to make `this` work in the callback
       this.handleChange = this.handleChange.bind(this);
     }
   
-    handleChange() {
-      this.setState(state => ({
-        text: "Hello"
-      }));
+    handleChange(event) {
+        this.setState({
+            text: event.target.value
+          });
     }
-  
+      
     render() {
       return (
           <div>
-          <textarea />
-          
+          <textarea id="editor" value={this.state.text} onChange={this.handleChange.bind(this)} />
+          <div dangerouslySetInnerHTML={{__html: this.state.text}}></div>
           </div>
       );
     }
   }
-  
 
 
 
