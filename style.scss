@@ -1,4 +1,4 @@
-$primary-color: #8bc8cc;
+$primary-color: hsl(184, 39%, 37%);
 $font: 'Odibee Sans', cursive;
 $border: 1px solid gainsboro;
 
@@ -13,41 +13,73 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+
 }
 
-#editor-name {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: $primary-color;
-    height: 100%;
-    width: 100px;
+#editor {
 
-    p {
+    &-name {
+    display: none;
+
+    }
+
+}
+
+@media all and (min-width: 800px){
+    #editor {
+
+        &-name {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        height: 100%;
+        width: 150px;
         font-size: 250%;
         line-height: 0;
         color: #FFF;
+    
+        }
+    
+        &-subname {
+            margin-top: 40px;
+            font-size: 55%;
+           
+        }
     }
 }
 
 #markdown-converter {
-    margin: 0px  10px 10px 110px;
+    margin: 15px;
     
     #editor {
         margin-top: 10px;
-        width: 100%;
+        width: 98%;
         height: 350px;
         border: none;
-        border-bottom: $border;
+        box-shadow: 0px 0px 7px -1px black inset;
+        border-radius: 10px;
+        padding: 10px;
+
     }
 
     #preview {
         margin-top: 10px;
-        box-shadow: 0px 1px 7px -1px black inset;
-        border-radius: 10px;
+
         padding: 10px;
-        font-size: 1.4rem;
+        background-color: #FFF;
+
+        p {
+        font-size: 1.3rem;
+        }
+    }
+}
+
+@media all and (min-width: 800px){
+    #markdown-converter {
+        margin: 0px  10px 10px 160px;
+      
     }
 }
